@@ -1,0 +1,36 @@
+.app-container {
+    margin: auto;
+}
+
+.heading-title {
+    text-align: center;
+}
+
+.preview-boxes {
+    display: flex;
+}
+
+.display-box {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.input-style {
+    width: 400px;
+    height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    text-align: left;
+}
+
+.output-style {
+    width: 400px;
+    height: 50vh;
+    background-color: #DCDCDC;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    text-align: left;
+  };
