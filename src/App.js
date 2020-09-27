@@ -1,19 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 let marked = require("marked");
 
-export default class App extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      markdown: " ",
-    };
-  }
+export default function App (props) {
 
-  updateMarkdown(markdown) {
-    this.setState({ markdown });
+  const [markdown, setMarkdown] = useState(" ");
+
+  const updateMarkdown = (markdown) => {
+    setMarkdown(markdown);
   }
-  render() {
 
     return (
       <div className="App">
@@ -31,9 +26,9 @@ export default class App extends React.Component {
               <h4>
                 Markdown Input
                 </h4>
-              <textarea className="input-style" value={this.state.markdown} onChange={(e) => { this.updateMarkdown(e.target.value) }}>
+              <textarea className="input-style" value={markdown} onChange={(e) => {updateMarkdown(e.target.value) }}>
                 {" "}
-                {console.log(this.state.markdown)}
+                {console.log(markdown)}
               </textarea>
             </div>
 
@@ -42,12 +37,11 @@ export default class App extends React.Component {
               <h4>
                 Preview
                 </h4>
-              <div className="output-style" dangerouslySetInnerHTML={{ __html: marked(this.state.markdown), }}></div>
+              <div className="output-style" dangerouslySetInnerHTML={{ __html: marked(markdown), }}></div>
             </div>
           </div>
         </div>
       </div>
     );
-  }
 }
 
