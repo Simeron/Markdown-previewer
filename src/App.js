@@ -2,13 +2,62 @@ import React, { useState } from 'react';
 import './App.css';
 let marked = require("marked");
 
+const placeholdertext = `# Welcome to my React Markdown Previewer!
+
+## This is a sub-heading...
+### And here's some other cool stuff:
+
+Heres some code, \`<div></div>\`, between 2 backticks.
+
+\`\`\`
+// this is multi-line code:
+
+function anotherExample(firstLine, lastLine) {
+  if (firstLine == '\`\`\`' && lastLine == '\`\`\`') {
+    return multiLineCode;
+  }
+}
+\`\`\`
+
+You can also make text **bold**... whoa!
+Or _italic_.
+Or... wait for it... **_both!_**
+And feel free to go crazy ~~crossing stuff out~~.
+
+There's also [links](https://www.freecodecamp.com), and
+> Block Quotes!
+
+And if you want to get really crazy, even tables:
+
+Wild Header | Crazy Header | Another Header?
+------------ | ------------- | -------------
+Your content can | be here, and it | can be here....
+And here. | Okay. | I think we get it.
+
+- And of course there are lists.
+  - Some are bulleted.
+     - With different indentation levels.
+        - That look like this.
+
+
+1. And there are numbererd lists too.
+1. Use just 1s if you want!
+1. And last but not least, let's not forget embedded images:
+
+![React Logo w/ Text](https://goo.gl/Umyytc)
+`;
+
 export default function App (props) {
 
   const [markdown, setMarkdown] = useState(" ");
+  const [markdownpreview, setMarkdownpreview] = useState(placeholdertext);
 
   const updateMarkdown = (markdown) => {
     setMarkdown(markdown);
   }
+  // const placeholderMarkDown = (markdownpreview) => {
+  //   setMarkdownpreview(markdownpreview);
+  // }
 
     return (
       <div className="App">
@@ -26,9 +75,11 @@ export default function App (props) {
               <h4>
                 Markdown Input
                 </h4>
-              <textarea className="input-style" value={markdown} onChange={(e) => {updateMarkdown(e.target.value) }}>
-                {" "}
-                {console.log(markdown)}
+              <textarea className="input-style" defaultValue={markdownpreview} onChange={(e) => {updateMarkdown(e.target.value) }}>
+                {/* {" "} */}
+                {/* {markdownpreview} */}
+                {/* {console.log(markdown)}
+                this is a test */}
               </textarea>
             </div>
 
@@ -43,5 +94,9 @@ export default function App (props) {
         </div>
       </div>
     );
-}
+  }
 
+//I have added the default value as the state I made for the markdown preview 
+//I have commented out the children values for the time being
+//markdown preview isn't currently show anything for default value which I have set so look into this
+//defaultValue={markdownpreview} this is what I removed from the markdown text area the first one

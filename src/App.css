@@ -17,20 +17,22 @@
 }
 
 .input-style {
-    width: 400px;
-    height: 50vh;
+    width: 600px;
+    height: 100vh;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
     padding: 10px;
     text-align: left;
 }
 
 .output-style {
-    width: 400px;
-    height: 50vh;
+    width: 600px;
+    height: 100vh;
     background-color: #DCDCDC;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
     padding: 10px;
     text-align: left;
   };
