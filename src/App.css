@@ -17,8 +17,8 @@
 }
 
 .input-style {
-    width: 600px;
-    height: 100vh;
+    width: 640px;
+    height: 150vh;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
@@ -27,8 +27,8 @@
 }
 
 .output-style {
-    width: 600px;
-    height: 100vh;
+    width: 640px;
+    height: 150vh;
     background-color: #DCDCDC;
     margin-left: auto;
     margin-right: auto;

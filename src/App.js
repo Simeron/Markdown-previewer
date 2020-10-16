@@ -50,7 +50,8 @@ And here. | Okay. | I think we get it.
 export default function App (props) {
 
   const [markdown, setMarkdown] = useState(" ");
-  const [markdownpreview, setMarkdownpreview] = useState(placeholdertext);
+  const [markdownpreview] = useState(placeholdertext);
+  const [clearMarkdown, setClearMarkdown] = useState(' ')
 
   const updateMarkdown = (markdown) => {
     setMarkdown(markdown);
@@ -58,6 +59,20 @@ export default function App (props) {
   // const placeholderMarkDown = (markdownpreview) => {
   //   setMarkdownpreview(markdownpreview);
   // }
+
+  const updateEditorToClear = (clearMarkdown) => {
+    setClearMarkdown(clearMarkdown);
+  }
+
+  function cleartheeditor() {
+    const textarea = document.querySelector('.input-style');
+    textarea.value = ' ';
+  }
+
+  function resetplaceholdertext() {
+    const textarea = document.querySelector('.input-style');
+    textarea.value = placeholdertext;
+  }
 
     return (
       <div className="App">
@@ -75,7 +90,7 @@ export default function App (props) {
               <h4>
                 Markdown Input
                 </h4>
-              <textarea className="input-style" defaultValue={markdownpreview} onChange={(e) => {updateMarkdown(e.target.value) }}>
+              <textarea className="input-style" defaultValue={markdownpreview} onChange={(e) => {updateMarkdown(e.target.value)}} type="reset" >
                 {/* {" "} */}
                 {/* {markdownpreview} */}
                 {/* {console.log(markdown)}
@@ -88,9 +103,11 @@ export default function App (props) {
               <h4>
                 Preview
                 </h4>
-              <div className="output-style" dangerouslySetInnerHTML={{ __html: marked(markdown), }}></div>
+              <div className="output-style" defaultValue={markdownpreview}dangerouslySetInnerHTML={{ __html: marked(markdown), }}></div>
             </div>
           </div>
+          <button onClick={() => cleartheeditor()}>Clear notes</button>
+          <button onClick={() => resetplaceholdertext()}>Reset place holder text</button>
         </div>
       </div>
     );
@@ -100,3 +117,5 @@ export default function App (props) {
 //I have commented out the children values for the time being
 //markdown preview isn't currently show anything for default value which I have set so look into this
 //defaultValue={markdownpreview} this is what I removed from the markdown text area the first one
+//markdown now showing in preview till change happens
+//tomorrow look up how to wireup a button to the editor 
