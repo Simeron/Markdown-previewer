@@ -51,18 +51,12 @@ export default function App (props) {
 
   const [markdown, setMarkdown] = useState(" ");
   const [markdownpreview] = useState(placeholdertext);
-  const [clearMarkdown, setClearMarkdown] = useState(' ')
+
 
   const updateMarkdown = (markdown) => {
     setMarkdown(markdown);
   }
-  // const placeholderMarkDown = (markdownpreview) => {
-  //   setMarkdownpreview(markdownpreview);
-  // }
 
-  const updateEditorToClear = (clearMarkdown) => {
-    setClearMarkdown(clearMarkdown);
-  }
 
   function cleartheeditor() {
     const textarea = document.querySelector('.input-style');
@@ -90,11 +84,7 @@ export default function App (props) {
               <h4>
                 Markdown Input
                 </h4>
-              <textarea className="input-style" defaultValue={markdownpreview} onChange={(e) => {updateMarkdown(e.target.value)}} type="reset" >
-                {/* {" "} */}
-                {/* {markdownpreview} */}
-                {/* {console.log(markdown)}
-                this is a test */}
+              <textarea className="input-style" defaultValue={markdownpreview} onChange={(e) => {updateMarkdown(e.target.value)}}>
               </textarea>
             </div>
 
@@ -103,7 +93,7 @@ export default function App (props) {
               <h4>
                 Preview
                 </h4>
-              <div className="output-style" defaultValue={markdownpreview}dangerouslySetInnerHTML={{ __html: marked(markdown), }}></div>
+              <div className="output-style" dangerouslySetInnerHTML={{ __html: marked(markdown), }}></div>
             </div>
           </div>
           <button onClick={() => cleartheeditor()}>Clear notes</button>
