@@ -47,7 +47,7 @@ And here. | Okay. | I think we get it.
 ![React Logo w/ Text](https://goo.gl/Umyytc)
 `;
 
-export default function App (props) {
+export default function App(props) {
 
   const [markdown, setMarkdown] = useState(" ");
   const [markdownpreview] = useState(placeholdertext);
@@ -68,40 +68,43 @@ export default function App (props) {
     textarea.value = placeholdertext;
   }
 
-    return (
-      <div className="App">
-        <div className="app-container">
-          <div className="heading-title">
-            <h1>
-              {" "}
+  return (
+    <div className="App">
+      <div className="app-container">
+        <div className="heading-title">
+          <h1>
+            {" "}
                   Markdown Previewer
               </h1>
-          </div>
+        </div>
 
-          <div className="preview-boxes">
-            <div className="display-box">
-              {" "}
-              <h4>
-                Markdown Input
+        <div className="preview-boxes">
+          <div className="display-box">
+            {" "}
+            <h4>
+              Markdown Input
                 </h4>
-              <textarea className="input-style" defaultValue={markdownpreview} onChange={(e) => {updateMarkdown(e.target.value)}}>
-              </textarea>
-            </div>
+            <textarea className="input-style" defaultValue={markdownpreview} onChange={(e) => { updateMarkdown(e.target.value) }}>
+            </textarea>
 
-            <div className="display-box">
-              {" "}
-              <h4>
-                Preview
-                </h4>
-              <div className="output-style" dangerouslySetInnerHTML={{ __html: marked(markdown), }}></div>
+            <div className="editor-buttons">
+              <button className="clear-editor" onClick={() => cleartheeditor()}>Clear notes</button>
+              <button className="replace-placeholder" onClick={() => resetplaceholdertext()}>Reset place holder text</button>
             </div>
           </div>
-          <button onClick={() => cleartheeditor()}>Clear notes</button>
-          <button onClick={() => resetplaceholdertext()}>Reset place holder text</button>
+
+          <div className="display-box">
+            {" "}
+            <h4>
+              Preview
+                </h4>
+            <div className="output-style" dangerouslySetInnerHTML={{ __html: marked(markdown), }}></div>
+          </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
+}
 
 //I have added the default value as the state I made for the markdown preview 
 //I have commented out the children values for the time being

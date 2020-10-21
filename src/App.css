@@ -4,6 +4,15 @@
 
 .heading-title {
     text-align: center;
+    padding: 20px;
+    font-family: 'pacifico';
+    letter-spacing: 2px;
+    background-color: #FCC200
+}
+
+h4 {
+    padding: 10px;
+    font-family: 'proxima Nova';
 }
 
 .preview-boxes {
@@ -36,3 +45,32 @@
     padding: 10px;
     text-align: left;
   };
+
+  button {
+    margin: 10px;
+    border-radius: 5px;
+    background-color: red;
+  }
+
+  .editor-buttons {
+      width: 100%;
+      margin:auto;
+  }
+
+  .clear-editor {
+      background-color: #F0B800;
+      border-radius: 5px;
+      margin: auto;
+      padding: 5px;
+      font-family: 'proxima Nova';
+      margin: 10px;
+  }
+
+  .replace-placeholder {
+    background-color: #F0B800;
+    border-radius: 5px;
+    margin: auto;
+    padding: 5px;
+    font-family: 'proxima Nova';
+    margin: 10px;
+  }
