@@ -1,17 +1,14 @@
-.app-container {
-    margin: auto;
-}
-
 .heading-title {
     text-align: center;
     padding: 20px;
     font-family: 'pacifico';
     letter-spacing: 2px;
-    background-color: #FCC200
+    background-color: #FCC200;
+    border-bottom: solid 2px black;
 }
 
 h4 {
-    padding: 10px;
+    padding: 20px;
     font-family: 'proxima Nova';
 }
 
@@ -20,10 +17,15 @@ h4 {
 }
 
 .display-box {
-    margin: auto;
     width: 100%;
     text-align: center;
 }
+
+.display-box:first-child {
+    background-color:#F08B0C;
+    color: #ffffff;
+    border-right: solid 2px black;
+  }
 
 .input-style {
     width: 640px;
@@ -46,31 +48,16 @@ h4 {
     text-align: left;
   };
 
-  button {
-    margin: 10px;
-    border-radius: 5px;
-    background-color: red;
-  }
-
   .editor-buttons {
       width: 100%;
       margin:auto;
   }
 
-  .clear-editor {
-      background-color: #F0B800;
+  .clear-editor, .replace-placeholder {
+      background-color: #FCC200;
       border-radius: 5px;
       margin: auto;
       padding: 5px;
       font-family: 'proxima Nova';
       margin: 10px;
-  }
-
-  .replace-placeholder {
-    background-color: #F0B800;
-    border-radius: 5px;
-    margin: auto;
-    padding: 5px;
-    font-family: 'proxima Nova';
-    margin: 10px;
   }
