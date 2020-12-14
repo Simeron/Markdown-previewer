@@ -10,7 +10,7 @@
 
 1. Click into the markdown preview editor and delete the place holder text or use the 'clear notes' button.
 2. See the text that you write appear in the preveiew window. Feel free to experient with different markdwon syntax
-3. Use the 'clear notes' button below if you want to clear all of your text use the clear notes button at the botton of the editor
+3. Use the 'clear notes' button below if you want to clear all of your text use the clear notes button at the botton of the editor.
 4. If you want to reset the place holder text then you can click on the 'reset place holder text' button and this will reset all of the notes back to the placeholder MarkDown notes
 
 **Where I was inspired:**  I have been doing a lot of learning through 'Free Code Camp' and during my learning experience they suggest projects for you to build to help you build your skills. The Markdown Previewer was one of the suggestion. I wasn't completely confident about where to start so I did follow a tutorial which helped me a markdown previwer with class components which gave me a great base to start from. I then went on to change this and add my own features: 

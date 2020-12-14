@@ -106,9 +106,11 @@ export default function App(props) {
   );
 }
 
-//I have added the default value as the state I made for the markdown preview 
+//I have added the default value as the state I made for the markdown preview - done
 //I have commented out the children values for the time being
 //markdown preview isn't currently show anything for default value which I have set so look into this
 //defaultValue={markdownpreview} this is what I removed from the markdown text area the first one
 //markdown now showing in preview till change happens
 //tomorrow look up how to wireup a button to the editor 
+//14/12/2020 - For the time being this project is as good as done. I have a good working MVP to add to my dev portfolio
+// Test comment
