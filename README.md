@@ -29,7 +29,7 @@
 ![Image of the bottom of the Markdown Previwer](./public/markdown-previwer-bottom.png)
 
 
-## Markdown Previewer React README Docs set up
+## Markdown Previewer React README Docs set up for project
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
